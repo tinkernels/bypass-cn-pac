@@ -1,4 +1,4 @@
-# CN IP Whitelist PAC
+# Bypass CN PAC
 
 Steps:
 
