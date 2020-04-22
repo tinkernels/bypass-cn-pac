@@ -6,12 +6,16 @@
     <script type="text/javascript" src="whitelist.pac"></script>
     <script type="text/javascript" src="test.js"></script>
 </head>
-<body onload="begin_test()">
+<body>
     <div>
-        <input id='input'></input><button type="button" onclick="test_one()">Check</button>
+        <input id='input'></input><button type="button" onclick="_test_one()">Check</button>
     </div>
     <div>
         <input id='result'></input>
+    </div>
+    <hr />
+    <div>
+        <button type="button" onclick="_begin_test()">Batch Test</button>
     </div>
     <div>
         <textarea rows="30" cols="30" id="output"></textarea>
