@@ -83,7 +83,8 @@ def generate_ipv4_ranges_for_pac():
     for k, v in cn_ipv4_ranges.items():
         json_content += f' "{k}": '
         json_content += f"[{','.join(v)}],\n"
-    json_content = json_content[:-1]
+    # Trim the 「,\n」 at the end of array.
+    json_content = json_content[:-2]
     json_content += '}'
     return json_content
 

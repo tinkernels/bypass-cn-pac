@@ -31,7 +31,7 @@ function isIPv4(host) {
   }
 }
 
-function castIP24BitLToInt(ip) {
+function cast24BitLowOfIPToInt(ip) {
   var bytes = ip.split(".");
   var result = 0;
   for (var i = 0, len = bytes.length; i <= len - 1; i++) {
@@ -41,7 +41,7 @@ function castIP24BitLToInt(ip) {
 }
 
 function isIPInSubnet(ip, subnetHead24BitLow, subnetTail24BitLow) {
-  var ipInt24BitL = castIP24BitLToInt(ip);
+  var ipInt24BitL = castLow24BitOfIPToInt(ip);
   if (ipInt24BitL <= subnetTail24BitLow && ipInt24BitL >= subnetHead24BitLow) {
     return true;
   }
