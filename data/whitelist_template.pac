@@ -41,7 +41,7 @@ function cast24BitLowOfIPToInt(ip) {
 }
 
 function isIPInSubnet(ip, subnetHead24BitLow, subnetTail24BitLow) {
-  var ipInt24BitL = castLow24BitOfIPToInt(ip);
+  var ipInt24BitL = cast24BitLowOfIPToInt(ip);
   if (ipInt24BitL <= subnetTail24BitLow && ipInt24BitL >= subnetHead24BitLow) {
     return true;
   }
