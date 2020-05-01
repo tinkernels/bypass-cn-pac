@@ -74,24 +74,31 @@ function isCNIPv4(ip) {
 
 function FindProxyForURL(url, host) {
   var ipHost = host;
-
+  alert(">>> hostname:" + host + "url: " + url); 
   if (isPlainHostName(host)) {
+    alert("<<< palin hostname DIRECT : " + host );
     return DIRECT;
   } else if (!isIPv4(host)) {
     ipHost = dnsResolve(host);
+    alert(">>> resolve: " + host +" >>> " + ipHost);
   }
 
   if (!ipHost) {
     // use proxy when can't resolve host.
+    alert("<<< resolve failed DIRECT : " + host );
     return PROXY;
   } else if (!isIPv4(ipHost)) {
+    alert("<<< ipv6 or else DIRECT : " + host );
     // IPv6 or else
     return DIRECT;
   } else if (isIPv4InPrivateNetwork(ipHost)) {
+    alert("<<< private network DIRECT : " + host );
     return DIRECT;
   } else if (isCNIPv4(ipHost)) {
+    alert("<<< cn ipv4 DIRECT : " + host );
     return DIRECT;
   } else {
+    alert("<<< others PROXY : " + host );
     return PROXY;
   }
 }
