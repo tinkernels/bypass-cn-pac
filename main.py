@@ -18,7 +18,7 @@ def parse_args():
                         help='path to template pac')
     parser.add_argument('-o', '--output', dest='output', default='whitelist.pac',
                         help='path to output pac', metavar='PAC')
-    parser.add_argument('-p', '--proxy', dest='proxy', default='"SOCKS5 127.0.0.1:1086; SOCKS 127.0.0.1:1086; DIRECT;"',
+    parser.add_argument('-p', '--proxy', dest='proxy', default='"SOCKS5 127.0.0.1:1086; SOCKS 127.0.0.1:1086; PROXY 127.0.0.1:1087; DIRECT;"',
                         help='the proxy parameter in the pac file, for example,\
         "127.0.0.1:1080;"', metavar='SOCKS5')
     return parser.parse_args()

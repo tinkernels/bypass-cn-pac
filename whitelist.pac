@@ -1,4 +1,4 @@
-var PROXY = "SOCKS5 127.0.0.1:1086; SOCKS 127.0.0.1:1086; DIRECT;";
+var PROXY = "SOCKS5 127.0.0.1:1086; SOCKS 127.0.0.1:1086; PROXY 127.0.0.1:1087; DIRECT;";
 var DIRECT = "DIRECT;";
 
 var privateNetworks = { "127": [0x0,0xff], "10": [0x0,0xffffff], "172": [0x100000,0x1fffff], "192": [0xa80000,0xa8ffff]};
